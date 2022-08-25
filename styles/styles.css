@@ -245,4 +245,8 @@
 .carousel-dark .carousel-caption {
   color: #000;
 }
+
+.img-fluid {
+  height: 100vh;
+}
 /*# sourceMappingURL=styles.css.map */
