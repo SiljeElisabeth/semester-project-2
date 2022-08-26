@@ -13,133 +13,126 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <link href="styles.css" rel="stylesheet" />
-    <title>Semester Project 2 || Silje Thunæs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Sans:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <title>Capital store || Home</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">Navbar</a>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
-              >
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
+      <nav id="main-nav">
+        <h1>Capital</h1>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><img src="img/iconCapital.png" /></li>
+        </ul>
       </nav>
+
+      <input type="checkbox" id="hamburger-check" />
+      <label for="hamburger-check" class="hamburger-button">
+        <div role="nav" id="sidebar-nav">
+          <ul>
+            <p>X</p>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Cart</a></li>
+          </ul>
+        </div>
+      </label>
+
+      <div class="smallscreen-nav-container">
+        <h1 class="small-logo">C</h1>
+        <a href="#"
+          ><img
+            class="shopping-icon"
+            src="/img/iconCapital.png"
+            alt="shopping cart icon"
+        /></a>
+      </div>
+      <div class="overlay"></div>
     </header>
+    <img
+      src="img/tem-img/zhu-liang-e4KaE4x3Ccw-unsplash.jpg"
+      class="img-fluid"
+      alt="Responsive image"
+    />
     <main>
-      <div class="container">
-        <img
-          src="img/tem-img/ben-weber-8W-p8SS6NJE-unsplash.jpg"
-          class="img-fluid"
-          alt="..."
-        />
-        <h1>FEATURED</h1>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-2">
-              <div class="card">
-                <img
-                  src="img/tem-img/brad-starkey-Bowrbqz1kgw-unsplash.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
+      <div class="container ftd-container">
+        <h2>Featured</h2>
+        <div class="ftd-grid">
+          <div class="card mb-3">
+            <img
+              src="img/tem-img/he-s-her-lobster-nKK32qJheBY-unsplash.jpg"
+              class="card-img-top card-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Purse</h5>
+              <p class="card-text">kr 2099</p>
             </div>
-            <div class="col">
-              <div class="card">
-                <img
-                  src="img/tem-img/lefteris-kallergis-j1GiPlvSGWI-unsplash.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
+          </div>
+
+          <div class="card mb-3">
+            <img
+              src="img/tem-img/irene-kredenets-pSVYyO-XlJk-unsplash.jpg"
+              class="card-img-top card-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Purse</h5>
+              <p class="card-text">kr 2099</p>
             </div>
-            <div class="col">
-              <div class="card">
-                <img
-                  src="img/tem-img/lefteris-kallergis-j1GiPlvSGWI-unsplash.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
+          </div>
+
+          <div class="card mb-3 breakpoint-columns">
+            <img
+              src="img/tem-img/irene-kredenets-tcVH_BwHtrc-unsplash.jpg"
+              class="card-img-top card-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Purse</h5>
+              <p class="card-text">kr 2099</p>
             </div>
-            <div class="col">
-              <div class="card">
-                <img
-                  src="img/tem-img/mojtaba-mosayebzadeh-gGEt1xMn3ak-unsplash.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
+          </div>
+          <div class="card mb-3 breakpoint-columns">
+            <img
+              src="img/tem-img/laura-chouette-CtOA9wbFAdQ-unsplash.jpg"
+              class="card-img-top card-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Purse</h5>
+              <p class="card-text">kr 2099</p>
             </div>
           </div>
         </div>
       </div>
+      <div class="cta-container">
+        <a class="cta-home" href="#">View More</a>
+      </div>
+      <div class="news-container">
+        <h2>News</h2>
+        <img
+          src="img/tem-img/leisara-creative-studio-FskOHt3xuig-unsplash.jpg"
+        />
+      </div>
     </main>
+    <footer>
+      <p>
+        footer contetn fjeiwo fjiweoøf jewioøafj eiowøajfgiowerøajgiorøea
+        jgiorejg oerøj
+      </p>
+      <div>Social media contetn</div>
+    </footer>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

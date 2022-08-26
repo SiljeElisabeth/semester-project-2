@@ -1,0 +1,98 @@
+@import "./mixin";
+
+.smallscreen-nav-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: right;
+    align-items: center;
+}
+.shopping-icon{
+    width:30px;
+    height:30px;
+    margin-right:2em;
+}
+.small-logo{
+    margin-left:2.5em;
+}
+
+.hamburger-button{
+    position:absolute;
+    top:-3px;
+    left:7px;
+    width:50px;
+    height:30px;
+    display:block;
+    border:none;
+    margin:30px;
+    background: linear-gradient(
+        to bottom, 
+        black, black 6%, 
+        white 14%, white 49%, 
+        black 30%, black 60%, 
+        white 56%, white 90%, 
+        black 80%, black 100%
+      );
+}
+
+#sidebar-nav {
+    visibility: hidden;
+    position:fixed;
+    top:0;
+    left:-150px;
+    height:100%;
+    width:70%;
+    transition: 0.3s;
+    background-color:white;
+    z-index:2;
+}
+
+#sidebar-nav ul{
+    padding:40px;
+}
+#sidebar-nav li{
+    list-style: none;
+    padding-top:10px;
+}
+#sidebar-nav a{
+    @include nav-a;
+}
+#sidebar-nav a:hover{
+    @include nav-a-hover;
+}
+.active{
+    color:$primary !important;
+}
+ul p{
+    margin-left:100%;
+    font-size:2em;
+}
+
+#hamburger-check:checked + .hamburger-button #sidebar-nav{
+    visibility:visible;
+    left:0;
+    z-index:1;
+}
+
+#hamburger-check:checked ~ .overlay{
+    visibility: visible;
+    opacity: 0.4;
+}
+.overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition:visibility .35, height .35;
+    overflow: hidden;
+    background:black;
+    z-index: 0;
+}
+#hamburger-check{
+    display: none;
+}
+
+

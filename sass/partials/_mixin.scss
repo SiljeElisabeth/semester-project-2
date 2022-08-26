@@ -1,0 +1,24 @@
+@mixin nav-a{
+    color:black;
+    text-decoration: none;
+}
+
+@mixin nav-a-hover{
+    color:$primary;
+}
+@mixin cta{
+    width:80%;
+    text-align:center;
+    padding:5px;
+    border-radius: 5px;
+    font-weight:bold;
+    margin-bottom:30px;
+    filter:drop-shadow(4px 4px 4px #cacaca);
+    text-decoration: none;
+}
+
+@mixin img{
+    filter:drop-shadow(4px 4px 4px #cacaca);
+    width:100%;
+    padding:20px;
+}

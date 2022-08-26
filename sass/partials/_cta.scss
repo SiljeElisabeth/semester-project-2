@@ -1,0 +1,16 @@
+@import "./mixin";
+
+.cta-container{
+    display: flex;
+    justify-content: center;
+}
+.cta-home{
+    @include cta;
+    color:$primary;
+    background-color:$secondary;
+}
+.cta-home:hover{
+    background-color:rgb(241, 241, 241);
+    color:$primary;
+    text-decoration: none;
+}

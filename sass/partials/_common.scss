@@ -1,0 +1,21 @@
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background-color: $color-bg;
+}
+
+header{
+    background-color: $secondary;
+}
+h1{
+    font-family:'Aboreto', cursive;
+}
+.small-logo{
+    font-size: 4em;
+}
+footer{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: $color-footer;
+    color:#C6C4C3;
+    padding:10px;
+}

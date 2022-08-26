@@ -1,3 +1,31 @@
-.img-fluid{
-    height:100vh;
+@import "./mixin";
+
+.featured-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.card-img{
+    max-height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+.col{
+    padding:10px;
+}
+.ftd-container h2{
+    text-align: center;
+    color:$primary;
+    margin-top:2em;
+    margin-bottom:1em;
+}
+.ftd-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:10px;
+}
+.card{
+    filter:drop-shadow(4px 4px 4px #cacaca);
+}
+.news-container img{
+ @include img;
 }
