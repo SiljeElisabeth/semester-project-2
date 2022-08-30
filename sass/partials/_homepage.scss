@@ -22,10 +22,24 @@
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:10px;
+
+    
+    @media screen and (max-width: 750px){
+
+        grid-template-columns: 1fr 1fr;
+
+    }
 }
 .card{
     filter:drop-shadow(4px 4px 4px #cacaca);
 }
-.news-container img{
- @include img;
+
+
+.news-container {
+    max-width:750px;
+    margin:0 auto;
+
+    img{
+    @include img;
+    }
 }

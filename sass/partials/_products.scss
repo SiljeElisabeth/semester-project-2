@@ -1,0 +1,26 @@
+.product-grid-container{
+     margin-top:50px;
+     display:grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
+     gap:10px;
+
+     @media screen and (min-width:751px){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+     }
+}
+
+
+.d-flex{
+    margin: 30px 0 30px 0;
+}
+.search-btn{
+    border-radius:0 5px 5px 0;
+    background-color: white;
+    color:black;
+    border:none;
+    padding: 0 10px 0 10px;
+}
+.me-2{
+    margin:0;
+}

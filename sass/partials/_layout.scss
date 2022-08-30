@@ -1,14 +1,15 @@
 body{
     font-family: 'Noto Sans', sans-serif;
-    background-color: $color-bg;
 }
 
 header{
-    background-color: $secondary;
+    background-color: white;
 }
-h1{
+h1, h2{
     font-family:'Aboreto', cursive;
+    text-align:center;
 }
+
 .small-logo{
     font-size: 4em;
 }
@@ -18,4 +19,16 @@ footer{
     background-color: $color-footer;
     color:#C6C4C3;
     padding:10px;
+
+    p{
+        max-width:70%;
+    }
+    .fa {
+        color:white;
+        font-size:1.5em;
+        padding-right:10px;
+    }
+    a{
+        text-decoration: none;
+    }
 }

@@ -6,6 +6,11 @@
     grid-template-rows: 1fr;
     justify-items: right;
     align-items: center;
+
+    @media screen and (min-width:751px){
+        display:none;
+    
+    }
 }
 .shopping-icon{
     width:30px;
@@ -33,6 +38,11 @@
         white 56%, white 90%, 
         black 80%, black 100%
       );
+
+      @media screen and (min-width:751px){
+            display: none;
+        
+    }
 }
 
 #sidebar-nav {
@@ -45,21 +55,20 @@
     transition: 0.3s;
     background-color:white;
     z-index:2;
+
+        ul{
+            padding:40px;
+        }
+        li{
+            list-style: none;
+            padding-top:10px;
+        }
+        a{
+            @include nav-a; 
+        }
 }
 
-#sidebar-nav ul{
-    padding:40px;
-}
-#sidebar-nav li{
-    list-style: none;
-    padding-top:10px;
-}
-#sidebar-nav a{
-    @include nav-a;
-}
-#sidebar-nav a:hover{
-    @include nav-a-hover;
-}
+
 .active{
     color:$primary !important;
 }
@@ -96,3 +105,35 @@ ul p{
 }
 
 
+#main-nav{
+    display: flex;
+    justify-content: center;
+
+        h1{
+            margin-top:20px;
+        }
+
+    li{
+        padding-left:20px;
+        margin-top:30px;
+        list-style: none;
+        display:inline-block;
+    }
+
+    a{
+        text-decoration: none;
+        color:$primary;
+        font-size:1.1em;
+        font-weight:bold;
+    }
+
+    @media screen and (max-width: 750px){
+            display:none;
+
+    }
+}
+@media screen and (max-width: 750px){
+    .breakpoint-columns{
+        display: none;
+    }
+} 

@@ -3,16 +3,13 @@
     text-decoration: none;
 }
 
-@mixin nav-a-hover{
-    color:$primary;
-}
-@mixin cta{
-    width:80%;
+@mixin cta($width, $padding,$margin){
+    width:$width;
     text-align:center;
-    padding:5px;
+    padding:$padding;
     border-radius: 5px;
     font-weight:bold;
-    margin-bottom:30px;
+    margin-bottom:$margin;
     filter:drop-shadow(4px 4px 4px #cacaca);
     text-decoration: none;
 }
