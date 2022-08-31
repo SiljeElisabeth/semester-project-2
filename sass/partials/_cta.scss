@@ -18,3 +18,34 @@
     color:$primary;
     text-decoration: none;
 }
+.add-to-cart, 
+.checkout,
+.login{
+    background-color: $color-add;
+    border: 1px solid $color-add-border;
+    @include cta(100%, 8px, 30px);
+}
+.checkout{
+    @media screen and (min-width:751px){
+        @include cta(50%, 5px, 0 auto);
+    }
+}
+
+
+.add-to-cart:hover,
+.checkout:hover{
+    background-color:$color-add-hover;
+}
+.fa-angle-left{
+    font-size: 2em;
+    margin:10px;
+}
+.login{
+    background-color: $primary;
+    color:white;
+    border: 1px solid $primary;
+    margin-top:50px;
+}
+.login:hover{
+    background-color: #642a75;
+}

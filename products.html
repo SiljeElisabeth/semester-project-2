@@ -22,12 +22,16 @@
   <body>
     <header>
       <nav id="main-nav">
-        <h1 id="main-logo">Capital</h1>
+        <a href="index.html"><img src="img/logo.png" id="main-logo" /></a>
         <ul>
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Login</a></li>
-          <li><img class="shopping-icon" src="img/iconCapital.png" /></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="products.html">Shop</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li>
+            <a href="cart.html"
+              ><img class="shopping-icon" src="img/iconCapital.png"
+            /></a>
+          </li>
         </ul>
       </nav>
 
@@ -38,17 +42,20 @@
             <p>X</p>
             <li><a href="index.html">Home</a></li>
             <li><a class="active" href="products.html">Shop</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Cart</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="cart.html">Cart</a></li>
           </ul>
         </div>
       </label>
+
       <div class="smallscreen-nav-container">
-        <h1 class="small-logo">C</h1>
-        <a href="#"
+        <a href="index.html">
+          <img class="small-logo" src="img/logosmall.png" alt="small logo"
+        /></a>
+        <a href="cart.html"
           ><img
             class="shopping-icon"
-            src="/img/iconCapital.png"
+            src="/img/iconblack.png"
             alt="shopping cart icon"
         /></a>
       </div>
@@ -66,17 +73,19 @@
           <button class="search-btn" type="submit">Search</button>
         </form>
         <div class="product-grid-container">
-          <div class="card mb-3">
-            <img
-              src="img/tem-img/irene-kredenets-pSVYyO-XlJk-unsplash.jpg"
-              class="card-img-top card-img"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Purse</h5>
-              <p class="card-text">kr 2099</p>
-            </div>
-          </div>
+          <a href="product-detail.html">
+            <div class="card mb-3">
+              <img
+                src="img/tem-img/irene-kredenets-pSVYyO-XlJk-unsplash.jpg"
+                class="card-img-top card-img"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Purse</h5>
+                <p class="card-text">kr 2099</p>
+              </div>
+            </div></a
+          >
           <div class="card mb-3">
             <img
               src="img/tem-img/aurelia-dubois-xzrJCS4grC4-unsplash.jpg"
