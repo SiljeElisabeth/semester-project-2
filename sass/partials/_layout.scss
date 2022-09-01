@@ -1,7 +1,16 @@
 body{
     font-family: 'Noto Sans', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+html {
+    height: 100%;
 }
 
+.wrapper { //under header, close over footer
+    flex: 1 0 auto;
+}
 header{
     background-color: white;
 }
@@ -14,6 +23,7 @@ img{
     width:100%;
 }
 footer{
+    flex-shrink: 0;
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: $color-footer;

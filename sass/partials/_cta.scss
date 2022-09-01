@@ -4,6 +4,10 @@
     display: flex;
     justify-content: center;
 }
+.cart-cta{
+    flex-direction: column;
+    align-items: center;
+}
 .cta-home{
     @include cta(80%,5px, 30px);
     color:$primary;
@@ -13,11 +17,23 @@
         @include cta(20%, 5px, 30px);
     }
 }
-.cta-home:hover{
+.cta-home:hover,
+.cta-cart:hover{
     background-color:#f1f1f1;
     color:$primary;
     text-decoration: none;
 }
+.cta-cart{
+    @include cta(100%,5px, 30px);
+    color:$primary;
+    background-color:white;
+
+    @media screen and (min-width:751px){
+        @include cta(50%, 5px, 30px);
+    }
+
+}
+
 .add-to-cart, 
 .checkout,
 .login{
