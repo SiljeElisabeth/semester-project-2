@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
 }
-.cart-cta{
+.column-cta{
     flex-direction: column;
     align-items: center;
 }
@@ -36,10 +36,11 @@
 
 .add-to-cart, 
 .checkout,
-.login{
+.login,
+.save-cta{
     background-color: $color-add;
     border: 1px solid $color-add-border;
-    @include cta(100%, 8px, 30px);
+    @include cta(100%, 5px, 30px);
 }
 .checkout{
     @media screen and (min-width:751px){
@@ -47,7 +48,12 @@
     }
 }
 
-
+.delete-cta{
+    @include cta(100%, 5px, 0 auto);
+    border:none;
+    background-color: red;
+    color:white;
+}
 .add-to-cart:hover,
 .checkout:hover{
     background-color:$color-add-hover;
@@ -64,4 +70,7 @@
 }
 .login:hover{
     background-color: #642a75;
+}
+.add-image-container{
+    margin-bottom:20px;
 }

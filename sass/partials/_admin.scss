@@ -1,0 +1,47 @@
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+    background-color:white;
+}
+.tab-pane{
+    background-color: white;
+    padding:20px;
+    border-radius:0 0 10px 10px;
+    border:none;
+    box-shadow:$shadow;
+}
+#title, 
+#price,
+#description{
+    width:100%;
+}
+.description{
+    resize:vertical;
+}
+
+
+
+
+.tab-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+        img{
+        max-width: 50%;
+        }
+    /* .descript-img-container{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    } */
+}
+.edit-image{
+    img{
+        height:250px;
+        object-fit:contain;
+        margin-bottom:20px;
+    }
+}
+
+#tab-content-edit{
+        display:none;
+    }
+

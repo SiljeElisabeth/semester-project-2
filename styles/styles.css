@@ -12681,11 +12681,6 @@ footer a {
   text-decoration: none;
 }
 
-.active {
-  color: #743089 !important;
-  text-decoration: underline;
-}
-
 ul p {
   margin-left: 100%;
   font-size: 2em;
@@ -12745,7 +12740,6 @@ ul p {
   text-decoration: none;
   color: #743089;
   font-size: 1.1em;
-  font-weight: bold;
 }
 
 @media screen and (max-width: 750px) {
@@ -12775,7 +12769,7 @@ ul p {
           justify-content: center;
 }
 
-.cart-cta {
+.column-cta {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -12850,12 +12844,13 @@ ul p {
 
 .add-to-cart,
 .checkout,
-.login {
+.login,
+.save-cta {
   background-color: #9AE11A;
   border: 1px solid #15A42F;
   width: 100%;
   text-align: center;
-  padding: 8px;
+  padding: 5px;
   border-radius: 5px;
   font-weight: bold;
   margin-bottom: 30px;
@@ -12878,6 +12873,21 @@ ul p {
   }
 }
 
+.delete-cta {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 0 auto;
+  -webkit-filter: drop-shadow(4px 4px 4px #cacaca);
+          filter: drop-shadow(4px 4px 4px #cacaca);
+  text-decoration: none;
+  border: none;
+  background-color: red;
+  color: white;
+}
+
 .add-to-cart:hover,
 .checkout:hover {
   background-color: #8ac718;
@@ -12897,6 +12907,10 @@ ul p {
 
 .login:hover {
   background-color: #642a75;
+}
+
+.add-image-container {
+  margin-bottom: 20px;
 }
 
 .product-grid-container {
@@ -13048,5 +13062,57 @@ ul p {
   margin: 20px 0;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.568);
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  background-color: white;
+}
+
+.tab-pane {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  border: none;
+  -webkit-box-shadow: 4px 4px 4px #cacaca;
+          box-shadow: 4px 4px 4px #cacaca;
+}
+
+#title,
+#price,
+#description {
+  width: 100%;
+}
+
+.description {
+  resize: vertical;
+}
+
+.tab-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  /* .descript-img-container{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    } */
+}
+
+.tab-item img {
+  max-width: 50%;
+}
+
+.edit-image img {
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 20px;
+}
+
+#tab-content-edit {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

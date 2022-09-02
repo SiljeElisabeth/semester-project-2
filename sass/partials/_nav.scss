@@ -74,10 +74,6 @@
 }
 
 
-.active{
-    color:$primary !important;
-    text-decoration: underline;
-}
 ul p{
     margin-left:100%;
     font-size:2em;
@@ -130,7 +126,6 @@ ul p{
         text-decoration: none;
         color:$primary;
         font-size:1.1em;
-        font-weight: bold;
     }
 
     @media screen and (max-width: 750px){
