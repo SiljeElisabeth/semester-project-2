@@ -5,7 +5,7 @@
     grid-template-columns: 1fr 1fr;
 }
 .card-img{
-    max-height: 200px;
+    height: 300px;
     object-fit: cover;
     object-position: center;
 }
@@ -34,6 +34,10 @@
     box-shadow: $shadow;
 }
 
+.home-banner-container img{
+    max-height:500px;
+    object-fit: cover;
+}
 
 .news-container {
     max-width:750px;

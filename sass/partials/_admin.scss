@@ -1,3 +1,7 @@
+.tab-container{
+    margin: 40px auto;
+    max-width:800px;
+}
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
     background-color:white;
 }
@@ -12,26 +16,27 @@
 #price,
 #description{
     width:100%;
+    margin-bottom:10px;
 }
 .description{
     resize:vertical;
 }
 
-
-
-
-.tab-item{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    
-        img{
-        max-width: 50%;
+.tab-view-item{
+    h3{
+        font-family: 'Noto Sans', sans-serif;
+        text-align:start;
+        border-bottom: 1px solid black;
+    }
+    img{
+    max-width: 50%;
+    }
+    .descript-img-container{
+        max-width:700px;
+        display:grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
         }
-    /* .descript-img-container{
-    display:grid;
-    grid-template-columns: 2fr 1fr;
-    } */
 }
 .edit-image{
     img{
@@ -40,7 +45,6 @@
         margin-bottom:20px;
     }
 }
-
 #tab-content-edit{
         display:none;
     }

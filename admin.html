@@ -71,7 +71,7 @@
     </header>
     <div class="wrapper">
       <main>
-        <div class="container">
+        <div class="container tab-container">
           <div>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
               <button
@@ -84,7 +84,7 @@
                 aria-controls="nav-home"
                 aria-selected="true"
               >
-                View
+                View/Edit products
               </button>
               <button
                 class="nav-link"
@@ -96,7 +96,7 @@
                 aria-controls="nav-contact"
                 aria-selected="false"
               >
-                Add
+                Add products
               </button>
             </div>
           </div>
@@ -109,10 +109,13 @@
               tabindex="0"
             >
               <div id="tab-content-view">
-                <h3>View Products</h3>
-                <div class="tab-item">
-                  <h3>Purse</h3>
+                <div class="tab-view-item">
+                  <h3>Product:</h3>
+                  <h4>Purse</h4>
                   <p>kr 2099</p>
+                  <div class="edit-cta-container">
+                    <button id="edit" class="edit-cta">Edit</button>
+                  </div>
                   <div class="descript-img-container">
                     <p>
                       bla blalbk ejifg ew geiw gj wtjgeiwopgjieow jgieow gw
@@ -124,9 +127,13 @@
                     />
                   </div>
                 </div>
-                <div class="tab-item">
-                  <h3>Purse</h3>
+
+                <div class="tab-view-item">
+                  <h4>Purse</h4>
                   <p>kr 2099</p>
+                  <div class="edit-cta-container">
+                    <button id="edit" class="edit-cta">Edit</button>
+                  </div>
                   <div class="descript-img-container">
                     <p>
                       bla blalbk ejifg ew geiw gj wtjgeiwopgjieow jgieow gw
@@ -171,10 +178,8 @@
                   </div>
                 </div>
                 <div class="cta-container column-cta">
-                  <button type="submit" id="save" class="save-cta">Save</button>
-                  <button type="submit" id="delete" class="delete-cta">
-                    Delete
-                  </button>
+                  <button id="save" class="save-cta">Save</button>
+                  <button id="delete" class="delete-cta">Delete</button>
                 </div>
               </div>
             </div>
@@ -213,7 +218,7 @@
                   </div>
                   <input type="file" id="img" />
                 </div>
-                <button type="submit" class="save-cta">Save</button>
+                <button id="add-save" class="save-cta">Save</button>
               </div>
             </div>
           </div>

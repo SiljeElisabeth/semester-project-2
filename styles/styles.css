@@ -12492,7 +12492,7 @@ fieldset:disabled .btn {
 }
 
 .card-img {
-  max-height: 200px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -12528,6 +12528,12 @@ fieldset:disabled .btn {
 .card {
   -webkit-box-shadow: 4px 4px 4px #cacaca;
           box-shadow: 4px 4px 4px #cacaca;
+}
+
+.home-banner-container img {
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .news-container {
@@ -12779,6 +12785,16 @@ ul p {
           align-items: center;
 }
 
+.edit-cta-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-right: 30px;
+}
+
 .cta-home {
   width: 80%;
   text-align: center;
@@ -12873,6 +12889,10 @@ ul p {
   }
 }
 
+#add-save {
+  margin-top: 20px;
+}
+
 .delete-cta {
   width: 100%;
   text-align: center;
@@ -12911,6 +12931,13 @@ ul p {
 
 .add-image-container {
   margin-bottom: 20px;
+}
+
+.edit-cta {
+  border: none;
+  background-color: white;
+  text-decoration: underline;
+  font-size: 1.2em;
 }
 
 .product-grid-container {
@@ -13064,6 +13091,11 @@ ul p {
   border-bottom: 1px solid rgba(0, 0, 0, 0.568);
 }
 
+.tab-container {
+  margin: 40px auto;
+  max-width: 800px;
+}
+
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   background-color: white;
@@ -13082,27 +13114,31 @@ ul p {
 #price,
 #description {
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .description {
   resize: vertical;
 }
 
-.tab-item {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  /* .descript-img-container{
-    display:grid;
-    grid-template-columns: 2fr 1fr;
-    } */
+.tab-view-item h3, .tab-view-item .h3 {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: start;
+  border-bottom: 1px solid black;
 }
 
-.tab-item img {
+.tab-view-item img {
   max-width: 50%;
+}
+
+.tab-view-item .descript-img-container {
+  max-width: 700px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
 }
 
 .edit-image img {

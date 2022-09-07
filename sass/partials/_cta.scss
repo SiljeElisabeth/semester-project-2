@@ -8,6 +8,11 @@
     flex-direction: column;
     align-items: center;
 }
+.edit-cta-container{
+    display:flex;
+    justify-content: right;
+    margin-right:30px;
+}
 .cta-home{
     @include cta(80%,5px, 30px);
     color:$primary;
@@ -47,7 +52,9 @@
         @include cta(50%, 5px, 0 auto);
     }
 }
-
+#add-save{
+    margin-top:20px;
+}
 .delete-cta{
     @include cta(100%, 5px, 0 auto);
     border:none;
@@ -73,4 +80,10 @@
 }
 .add-image-container{
     margin-bottom:20px;
+}
+.edit-cta{
+    border:none;
+    background-color:white;
+    text-decoration: underline;
+    font-size:1.2em;
 }
