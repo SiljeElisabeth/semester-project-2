@@ -9,30 +9,34 @@ export async function createHtmlHome(products, banner) {
                                         alt="${banner.hero_banner.alternativeText}"
                                     />`;
 
-  for (let i = 0; i < products.length; i++) {
+  const featuredProducts = products.filter(checkFeatured);
+
+  function checkFeatured(products) {
+    return products.featured === true;
+  }
+  for (let i = 0; i < featuredProducts.length; i++) {
     if (i === 4) {
       break;
     }
-    if (products[i].featured === true) {
-      console.log(i);
-      featuredGrid.innerHTML += `<div class="card mb-3">
+    featuredGrid.innerHTML += `<a class="featured-card" href="product-detail.html?id=${featuredProducts[i].id}">
+                                  <div class="card mb-3">
                                     <img
-                                    src="${products[i].image.url}"
+                                    src="${featuredProducts[i].image.url}"
                                     class="card-img-top card-img"
-                                    alt="${products[i].image.alternativeText}"
+                                    alt="${featuredProducts[i].image.alternativeText}"
                                     />
                                     <div class="card-body">
-                                    <h5 class="card-title">${products[i].title}</h5>
-                                    <p class="card-text">$${products[i].price}</p>
+                                    <h5 class="card-title">${featuredProducts[i].title}</h5>
+                                    <p class="card-text">$${featuredProducts[i].price}</p>
                                     </div>
-                                </div>`;
-    }
+                                   </div>
+                                </a>`;
   }
 
   newsContainer.innerHTML = `<h2>News</h2>
                                     <img
-                                    src="${products[1].image.url}"
+                                    src="${products[0].image.url}"
                                     class="img-fluid"
-                                    alt="Tan bag"
+                                    alt="${products[0].image.alternativeText}"
                                     />`;
 }
