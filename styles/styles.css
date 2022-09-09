@@ -12638,6 +12638,14 @@ footer a {
 .shopping-icon {
   width: 30px;
   height: 30px;
+}
+
+.shopping-icon-small {
+  width: 40px;
+  height: 40px;
+}
+
+#cart-icon-container {
   margin-right: 2em;
 }
 
@@ -12824,7 +12832,8 @@ ul p {
 }
 
 .cta-home:hover,
-.cta-cart:hover {
+.cta-cart:hover,
+.remove-from-cart:hover {
   background-color: #f1f1f1;
   color: #743089;
   text-decoration: none;
@@ -12873,6 +12882,21 @@ ul p {
   -webkit-filter: drop-shadow(4px 4px 4px #cacaca);
           filter: drop-shadow(4px 4px 4px #cacaca);
   text-decoration: none;
+}
+
+.remove-from-cart {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  -webkit-filter: drop-shadow(4px 4px 4px #cacaca);
+          filter: drop-shadow(4px 4px 4px #cacaca);
+  text-decoration: none;
+  color: #743089;
+  border: 1px solid #743089;
+  background-color: white;
 }
 
 @media screen and (min-width: 751px) {

@@ -35,10 +35,10 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Shop</a></li>
           <li><a href="login.html">Login</a></li>
-          <li>
+          <li class="cart-list-item">
             <a href="cart.html"
-              ><img class="shopping-icon" src="img/iconCapital.png"
-            /></a>
+              ><img class="shopping-icon" src="img/iconCapital.png" />
+            </a>
           </li>
         </ul>
       </nav>
@@ -60,12 +60,14 @@
         <a href="index.html">
           <img class="small-logo" src="img/logosmall.png" alt="small logo"
         /></a>
-        <a href="cart.html"
-          ><img
-            class="shopping-icon"
-            src="/img/iconblack.png"
-            alt="shopping cart icon"
-        /></a>
+        <div id="cart-icon-container">
+          <a href="cart.html"
+            ><img
+              class="shopping-icon-small"
+              src="/img/iconblack.png"
+              alt="shopping cart icon"
+          /></a>
+        </div>
       </div>
       <div class="overlay"></div>
     </header>
@@ -74,9 +76,6 @@
         <a href="products.html"><i class="fa-solid fa-angle-left"></i></a>
         <div class="container">
           <div class="product-item"></div>
-          <div class="cta-container">
-            <button class="add-to-cart">Add to cart</button>
-          </div>
           <div class="description-box"></div>
         </div>
       </main>

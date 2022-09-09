@@ -1,6 +1,6 @@
 import { apiProducts } from "./utils/api.js";
 import { homeBannerApi } from "./utils/api.js";
-import { createHtmlHome } from "./components/createHtml.js";
+import { createHtmlHome } from "./components/createHtmlHome.js";
 
 (async function fetchProducts() {
   try {

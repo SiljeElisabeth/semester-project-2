@@ -23,7 +23,8 @@
     }
 }
 .cta-home:hover,
-.cta-cart:hover{
+.cta-cart:hover,
+.remove-from-cart:hover{
     background-color:#f1f1f1;
     color:$primary;
     text-decoration: none;
@@ -47,6 +48,14 @@
     border: 1px solid $color-add-border;
     @include cta(100%, 5px, 30px);
 }
+.remove-from-cart{
+    @include cta(100%, 5px, 30px);
+    color:$primary;
+    border: 1px solid $primary;
+    background-color:white;
+}
+
+
 .checkout{
     @media screen and (min-width:751px){
         @include cta(50%, 5px, 0 auto);

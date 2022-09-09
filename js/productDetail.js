@@ -1,13 +1,10 @@
 import { apiProducts } from "./utils/api.js";
+import { createHtmlProductDetail } from "./components/createHtmlDetail.js";
+import { getExistingProduct, saveCart } from "./utils/storage.js";
 
 const queryString = document.location.search;
-
 const params = new URLSearchParams(queryString);
-
 const id = params.get("id");
-
-console.log(id);
-
 const singleProduct = apiProducts + "/" + id;
 
 (async function fetchProducts() {
@@ -21,15 +18,30 @@ const singleProduct = apiProducts + "/" + id;
   }
 })();
 
-const productContainer = document.querySelector(".product-item");
-const descriptionBox = document.querySelector(".description-box");
+export function handleClick() {
+  this.classList.toggle("remove-from-cart");
+  this.classList.toggle("add-to-cart");
 
-export async function createHtmlProductDetail(product) {
-  productContainer.innerHTML = `<img src="${product.image.url}" />
-                                <h3>${product.title}</h3>
-                                <p>${product.price}</p>`;
-  descriptionBox.innerHTML = ` <h4>Description:</h4>
-                                <p>
-                                ${product.description}
-                                </p>`;
+  const title = this.dataset.title;
+  const img = this.dataset.img;
+  const price = this.dataset.price;
+  const id = this.dataset.id;
+
+  const currentCart = getExistingProduct();
+
+  const itemExsist = currentCart.find((cartItem) => cartItem.id === id);
+
+  if (!itemExsist) {
+    const cartItem = {
+      title: title,
+      img: img,
+      price: price,
+      id: id,
+    };
+    currentCart.push(cartItem);
+    saveCart(currentCart);
+  } else {
+    const newCart = currentCart.filter((cartItem) => cartItem.id !== id);
+    saveCart(newCart);
+  }
 }
