@@ -1,6 +1,9 @@
 import { apiProducts } from "./utils/api.js";
 import { createHtmlProducts } from "./components/createHtmlProducts.js";
 import { searchProducts } from "./components/search.js";
+import { createNav } from "./components/createNav.js";
+
+createNav();
 
 (async function fetchProducts() {
   try {

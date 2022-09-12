@@ -12492,7 +12492,7 @@ fieldset:disabled .btn {
 }
 
 .card-img {
-  height: 300px;
+  height: 290px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -12525,9 +12525,9 @@ fieldset:disabled .btn {
   }
 }
 
-.card {
-  -webkit-box-shadow: 4px 4px 4px #cacaca;
-          box-shadow: 4px 4px 4px #cacaca;
+.ftd-grid a {
+  text-decoration: none;
+  color: black;
 }
 
 .home-banner-container img {
@@ -12581,6 +12581,13 @@ h1, .h1, h2, .h2 {
 
 img {
   width: 100%;
+}
+
+.card {
+  -webkit-box-shadow: 4px 4px 4px #cacaca;
+          box-shadow: 4px 4px 4px #cacaca;
+  max-height: 390px;
+  z-index: -1;
 }
 
 footer {
@@ -12645,7 +12652,7 @@ footer a {
   height: 40px;
 }
 
-#cart-icon-container {
+.cart-icon-container {
   margin-right: 2em;
 }
 
@@ -12666,6 +12673,10 @@ footer a {
   .hamburger-button {
     display: none;
   }
+}
+
+#small-cart {
+  text-decoration: none;
 }
 
 #sidebar-nav {
@@ -12752,7 +12763,7 @@ ul p {
 
 #main-nav a {
   text-decoration: none;
-  color: #743089;
+  color: black;
   font-size: 1.1em;
 }
 
@@ -12851,6 +12862,7 @@ ul p {
   text-decoration: none;
   color: #743089;
   background-color: white;
+  border: 1px solid gray;
 }
 
 @media screen and (min-width: 751px) {
@@ -12917,7 +12929,8 @@ ul p {
   margin-top: 20px;
 }
 
-.delete-cta {
+.delete-cta,
+.cart-remove-btn {
   width: 100%;
   text-align: center;
   padding: 5px;
@@ -12928,8 +12941,13 @@ ul p {
           filter: drop-shadow(4px 4px 4px #cacaca);
   text-decoration: none;
   border: none;
-  background-color: red;
+  background-color: #da3434;
   color: white;
+}
+
+.delete-cta:hover,
+.cart-remove-btn:hover {
+  background-color: #c72f2f;
 }
 
 .add-to-cart:hover,
@@ -13058,7 +13076,7 @@ ul p {
   gap: 10px;
 }
 
-.cart-container .add-remove-item {
+.cart-container .remove-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13071,7 +13089,7 @@ ul p {
 }
 
 @media screen and (min-width: 751px) {
-  .cart-container .add-remove-item {
+  .cart-container .remove-item {
     font-size: 1.2em;
   }
 }

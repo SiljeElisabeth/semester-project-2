@@ -28,7 +28,7 @@
     width:40px;
     height:40px;
 }
-#cart-icon-container{
+.cart-icon-container{
     margin-right:2em;
 }
 
@@ -55,7 +55,9 @@
         
     }
 }
-
+#small-cart{
+    text-decoration: none;
+}
 #sidebar-nav {
     visibility: hidden;
     position:fixed;
@@ -130,7 +132,7 @@ ul p{
 
     a{
         text-decoration: none;
-        color:$primary;
+        color:black;
         font-size:1.1em;
     }
 

@@ -33,6 +33,7 @@
     @include cta(100%,5px, 30px);
     color:$primary;
     background-color:white;
+    border: 1px solid gray;
 
     @media screen and (min-width:751px){
         @include cta(50%, 5px, 30px);
@@ -64,11 +65,16 @@
 #add-save{
     margin-top:20px;
 }
-.delete-cta{
+.delete-cta, 
+.cart-remove-btn{
     @include cta(100%, 5px, 0 auto);
     border:none;
-    background-color: red;
+    background-color: #da3434;
     color:white;
+}
+.delete-cta:hover,
+.cart-remove-btn:hover{
+    background-color: #c72f2f;
 }
 .add-to-cart:hover,
 .checkout:hover{
