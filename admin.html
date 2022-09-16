@@ -29,196 +29,64 @@
   </head>
   <body>
     <header>
-      <nav id="main-nav">
-        <a href="index.html"><img src="img/logo.png" id="main-logo" /></a>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Shop</a></li>
-          <li><a href="login.html">Logout</a></li>
-          <li>
-            <a href="cart.html"
-              ><img class="shopping-icon" src="img/iconCapital.png"
-            /></a>
-          </li>
-        </ul>
-      </nav>
-
-      <input type="checkbox" id="hamburger-check" />
-      <label for="hamburger-check" class="hamburger-button">
-        <div role="nav" id="sidebar-nav">
-          <ul>
-            <p>X</p>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Shop</a></li>
-            <li><a href="login.html">Logout</a></li>
-            <li><a class="active" href="cart.html">Cart</a></li>
-          </ul>
-        </div>
-      </label>
-
-      <div class="smallscreen-nav-container">
-        <a href="index.html">
-          <img class="small-logo" src="img/logosmall.png" alt="small logo"
-        /></a>
-        <a href="cart.html"
-          ><img
-            class="shopping-icon"
-            src="/img/iconblack.png"
-            alt="shopping cart icon"
-        /></a>
-      </div>
-      <div class="overlay"></div>
+      <nav id="main-nav"></nav>
+      <div id="smallnav-container"></div>
     </header>
     <div class="wrapper">
       <main>
-        <div class="container tab-container">
-          <div>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <button
-                class="nav-link active"
-                id="nav-home-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#nav-home"
-                type="button"
-                role="tab"
-                aria-controls="nav-home"
-                aria-selected="true"
-              >
-                View/Edit products
-              </button>
-              <button
-                class="nav-link"
-                id="nav-contact-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#nav-contact"
-                type="button"
-                role="tab"
-                aria-controls="nav-contact"
-                aria-selected="false"
-              >
-                Add products
-              </button>
-            </div>
-          </div>
-          <div class="tab-content" id="nav-tabContent">
-            <div
-              class="tab-pane fade show active"
-              id="nav-home"
-              role="tabpanel"
-              aria-labelledby="nav-home-tab"
-              tabindex="0"
-            >
-              <div id="tab-content-view">
-                <div class="tab-view-item">
-                  <h3>Product:</h3>
-                  <h4>Purse</h4>
-                  <p>kr 2099</p>
-                  <div class="edit-cta-container">
-                    <button id="edit" class="edit-cta">Edit</button>
-                  </div>
-                  <div class="descript-img-container">
-                    <p>
-                      bla blalbk ejifg ew geiw gj wtjgeiwopgjieow jgieow gw
-                      gmeiwopæ gkwopåæg ew gjweroipg æwkoåg'w gwjo
-                    </p>
-                    <img
-                      src="img/tem-img/kelly-sikkema-1Pgq9ZpIatI-unsplash.jpg"
-                      alt="purse"
-                    />
-                  </div>
-                </div>
+        <div class="container">
+          <h1>Admin page</h1>
+          <div class="admin-display">
+            <div class="message-container"></div>
+            <button id="view" class="tab-btn active-tab">View Products</button>
+            <button id="add" class="tab-btn">Add products</button>
 
-                <div class="tab-view-item">
-                  <h4>Purse</h4>
-                  <p>kr 2099</p>
-                  <div class="edit-cta-container">
-                    <button id="edit" class="edit-cta">Edit</button>
-                  </div>
-                  <div class="descript-img-container">
-                    <p>
-                      bla blalbk ejifg ew geiw gj wtjgeiwopgjieow jgieow gw
-                      gmeiwopæ gkwopåæg ew gjweroipg æwkoåg'w gwjo
-                    </p>
-                    <img
-                      src="img/tem-img/irene-kredenets-tcVH_BwHtrc-unsplash.jpg"
-                      alt="purse"
-                    />
-                  </div>
-                </div>
+            <div class="tab-container">
+              <div id="tab-view-container">
+                <h3>Current products</h3>
               </div>
-              <div id="tab-content-edit">
-                <h3>Edit products</h3>
-                <div>
-                  <label for="title">Title:</label>
-                </div>
-                <input type="text" id="title" />
-                <div>
-                  <div>
-                    <label for="price">Price:</label>
-                  </div>
-                  <input type="text" id="price" />
-                </div>
-                <div>
-                  <input type="checkbox" id="featured" />
-                  <label for="featured">Featured:</label>
-                </div>
-                <div>
-                  <div>
-                    <label for="description">Description:</label>
-                  </div>
-                  <textarea id="description" class="description"></textarea>
-                </div>
-                <div>
-                  <div class="edit-image">
-                    <label for="img">Image:</label>
-                    <img
-                      src="img/tem-img/he-s-her-lobster-nKK32qJheBY-unsplash.jpg"
-                      alt="purse"
-                    />
-                  </div>
-                </div>
-                <div class="cta-container column-cta">
-                  <button id="save" class="save-cta">Save</button>
-                  <button id="delete" class="delete-cta">Delete</button>
-                </div>
-              </div>
-            </div>
-            <div
-              class="tab-pane fade"
-              id="nav-contact"
-              role="tabpanel"
-              aria-labelledby="nav-contact-tab"
-              tabindex="0"
-            >
-              <div id="tab-content-add">
+
+              <div id="tab-add-container" class="hide-tabcontent">
                 <h3>Add products</h3>
-                <div>
-                  <label for="title">Title:</label>
-                </div>
-                <input type="text" id="title" />
-                <div>
+                <div class="message-container"></div>
+                <form id="add-form">
                   <div>
-                    <label for="price">Price:</label>
+                    <label for="add-title">Title:</label>
                   </div>
-                  <input type="text" id="price" />
-                </div>
-                <div>
-                  <input type="checkbox" id="featured" />
-                  <label for="featured">Featured:</label>
-                </div>
-                <div>
+                  <input type="text" id="add-title" class="add-input" />
+
                   <div>
-                    <label for="description">Description:</label>
+                    <label for="add-price">Price:</label>
                   </div>
-                  <textarea id="description" class="description"></textarea>
-                </div>
-                <div>
-                  <div class="add-image-container">
-                    <label for="img">Image:</label>
+                  $<input
+                    type="number"
+                    id="add-price"
+                    class="add-input add-price"
+                  />
+
+                  <div>
+                    <label for="add-description"
+                      >Description: (at least 10 characters)</label
+                    >
                   </div>
-                  <input type="file" id="img" />
-                </div>
-                <button id="add-save" class="save-cta">Save</button>
+                  <textarea
+                    id="add-description"
+                    class="description add-input"
+                  ></textarea>
+
+                  <div>
+                    <label for="add-image-url">Image url:</label>
+                  </div>
+                  <input type="url" id="add-image-url" class="add-input" />
+
+                  <div class="add-featured-container">
+                    <input type="checkbox" id="add-featured" value="featured" />
+                    <label for="add-featured">Featured</label>
+                  </div>
+                  <button type="submit" id="add-save" class="save-cta">
+                    Save
+                  </button>
+                </form>
               </div>
             </div>
           </div>
@@ -238,23 +106,6 @@
         <a href="#" class="fa fa-instagram"></a>
       </div>
     </footer>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="importmap">
-      {
-        "imports": {
-          "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js",
-          "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.esm.min.js"
-        }
-      }
-    </script>
-    <script type="module">
-      import * as bootstrap from "bootstrap";
-
-      new bootstrap.Popover(document.getElementById("popoverButton"));
-    </script>
+    <script src="./js/admin.js" type="module"></script>
   </body>
 </html>

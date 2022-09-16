@@ -1,11 +1,9 @@
 const productContainer = document.querySelector(".product-item");
 const descriptionBox = document.querySelector(".description-box");
-import { handleClick } from "../utils/handleClick.js";
-import { getExistingProduct } from "../utils/storage.js";
-import { createNav } from "./createNav.js";
-createNav();
+import { handleCart } from "../utils/handleCart.js";
+import { getFromStorage, storageKey } from "../utils/storage.js";
 
-const cart = getExistingProduct();
+const cart = getFromStorage(storageKey);
 
 export async function createHtmlProductDetail(product) {
   let buttonClass = "add-to-cart";
@@ -19,11 +17,12 @@ export async function createHtmlProductDetail(product) {
     buttonClass = "remove-from-cart";
     buttonText = "Remove from cart";
   }
-  productContainer.innerHTML = `<img src="${product.image.url}" />
+  console.log(product);
+  productContainer.innerHTML = `<img src="${product.image_url}" />
                                 <h3>${product.title}</h3>
                                 <p>$${product.price}</p> 
                                 <div class="cta-container">
-                                  <button id="add-to-cart" data-id="${product.id}" data-img="${product.image.url}" data-title="${product.title}" data-price="${product.price}" class="${buttonClass}">${buttonText}</button>
+                                  <button id="add-to-cart" data-id="${product.id}" data-img="${product.image_url}" data-title="${product.title}" data-price="${product.price}" class="${buttonClass}">${buttonText}</button>
                                 </div>`;
 
   descriptionBox.innerHTML = ` <h4>Description:</h4>
@@ -33,5 +32,5 @@ export async function createHtmlProductDetail(product) {
 
   const addToCart = document.querySelector("#add-to-cart");
 
-  addToCart.addEventListener("click", handleClick);
+  addToCart.addEventListener("click", handleCart);
 }

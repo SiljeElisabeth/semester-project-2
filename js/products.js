@@ -1,6 +1,6 @@
 import { apiProducts } from "./utils/api.js";
 import { createHtmlProducts } from "./components/createHtmlProducts.js";
-import { searchProducts } from "./components/search.js";
+import { searchProducts } from "./utils/search.js";
 import { createNav } from "./components/createNav.js";
 
 createNav();

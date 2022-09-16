@@ -1,25 +1,37 @@
-import { apiProducts } from "./utils/api.js";
-import { createHtmlProductDetail } from "./components/createHtmlDetail.js";
 import { createNav } from "./components/createNav.js";
 import { goBack } from "./utils/goBack.js";
+import { apiProducts } from "./utils/api.js";
+import { createHtmlEdit } from "./components/createHtmlEdit.js";
+import { submitEditForm } from "./utils/handleEdit.js";
+import { getUsername } from "./utils/storage.js";
+
 const backBtn = document.querySelector(".fa-angle-left");
+const editForm = document.querySelector("#edit-form");
 
 createNav();
+
+backBtn.addEventListener("click", goBack);
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const singleProduct = apiProducts + "/" + id;
 
+const username = getUsername();
+
+if (!username) {
+  document.location.href = "index.html";
+}
+
 (async function fetchProducts() {
   try {
     const response = await fetch(singleProduct);
     const product = await response.json();
 
-    createHtmlProductDetail(product);
+    createHtmlEdit(product);
   } catch (error) {
     console.log(error);
   }
 })();
 
-backBtn.addEventListener("click", goBack);
+editForm.addEventListener("submit", submitEditForm);

@@ -34,28 +34,45 @@
     </header>
     <div class="wrapper">
       <main>
-        <div class="container">
-          <form class="login-container">
-            <h2>Login</h2>
-            <div class="message-container"></div>
-            <input
-              class="username login-input"
-              type="text"
-              id="username"
-              placeholder="Username"
-            />
-            <div class="username-error"></div>
-
-            <input
-              class="password login-input"
-              type="password"
-              id="password"
-              placeholder="Password"
-            />
-            <div class="password-error"></div>
-
-            <button class="login">Login</button>
-          </form>
+        <div class="container" id="tab-content-edit">
+          <h1>Admin page</h1>
+          <a><i class="fa-solid fa-angle-left"></i></a>
+          <div>
+            <form id="edit-form">
+              <h3>Edit products</h3>
+              <div class="message-container"></div>
+              <input type="hidden" id="edit-id" />
+              <label for="title">Title:</label>
+              <input type="text" id="edit-title" class="add-input" />
+              <div>
+                <div>
+                  <label for="price">Price:</label>
+                </div>
+                <input type="text" id="edit-price" class="add-input" />
+              </div>
+              <div>
+                <input type="checkbox" id="edit-featured" class="featured" />
+                <label for="featured">Featured:</label>
+              </div>
+              <div>
+                <div>
+                  <label for="description">Description:</label>
+                </div>
+                <textarea id="edit-description" class="add-input"></textarea>
+              </div>
+              <div>
+                <div class="edit-image">
+                  <label for="img">Image:</label>
+                  <input type="url" id="edit-image" class="add-input" />
+                  <div class="img-preview"></div>
+                </div>
+              </div>
+              <div class="cta-container column-cta">
+                <button type="submit" id="save" class="save-cta">Save</button>
+                <div class="delete-container"></div>
+              </div>
+            </form>
+          </div>
         </div>
       </main>
     </div>
@@ -72,6 +89,7 @@
         <a href="#" class="fa fa-instagram"></a>
       </div>
     </footer>
-    <script src="./js/login.js" type="module"></script>
+
+    <script src="/js/edit.js" type="module"></script>
   </body>
 </html>

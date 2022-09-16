@@ -17,6 +17,7 @@ header{
 h1, h2{
     font-family:'Aboreto', cursive;
     text-align:center;
+    margin-top: 10px;
 }
 
 img{
@@ -27,6 +28,30 @@ img{
     max-height:390px;
     z-index:-1;
 }
+.message{
+   margin-bottom:5px;
+   padding-left:5px;
+}
+.error{
+    color:rgb(209, 0, 0);
+    border-left: solid 3px red;
+
+}
+.warning{
+    color:orange;
+    border-left: solid 3px orange;
+    
+}
+.success{
+    color:green;
+    border-left: solid 3px green;
+}
+
+.form-error{
+    border: 1px solid red;
+}
+
+
 footer{
     flex-shrink: 0;
     display: grid;

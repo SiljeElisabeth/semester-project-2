@@ -21,9 +21,9 @@ export async function createHtmlHome(products, banner) {
     featuredGrid.innerHTML += `<a class="featured-card" href="product-detail.html?id=${featuredProducts[i].id}">
                                   <div class="card mb-3">
                                     <img
-                                    src="${featuredProducts[i].image.url}"
+                                    src="${featuredProducts[i].image_url}"
                                     class="card-img-top card-img"
-                                    alt="${featuredProducts[i].image.alternativeText}"
+                                    alt="purse"
                                     />
                                     <div class="card-body">
                                     <h5 class="card-title">${featuredProducts[i].title}</h5>
@@ -33,10 +33,12 @@ export async function createHtmlHome(products, banner) {
                                 </a>`;
   }
 
+  const newProduct = products[products.length - 1].image_url;
+
   newsContainer.innerHTML = `<h2>News</h2>
                                     <img
-                                    src="${products[0].image.url}"
+                                    src="${newProduct}"
                                     class="img-fluid"
-                                    alt="${products[0].image.alternativeText}"
+                                    alt="purse"
                                     />`;
 }

@@ -2,8 +2,7 @@
 .product-item{
     img{
         max-height: 450px;
-        object-fit:cover;
-        box-shadow:$shadow;
+        object-fit:contain;
     }
     h3{
         font-size:2em;

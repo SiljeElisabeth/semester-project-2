@@ -4,18 +4,19 @@
     border-radius:$border-radius;
     margin-bottom:50px;
 
-    img{
-        @media screen and (min-width:751px){
-            height:250px;
-            object-fit: cover;
-        }
-
     }
 
     .cart-grid{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap:10px;
+
+            img{
+            max-height:250px;
+            object-fit: contain;
+            object-position: center;
+            }
+
     }
 
     .remove-item{
@@ -39,4 +40,3 @@
         margin-top:20px;
         padding:30px 10px 30px 10px;
     }
-}

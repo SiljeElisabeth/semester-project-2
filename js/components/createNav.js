@@ -1,27 +1,52 @@
 const mainNav = document.querySelector("#main-nav");
 const smallNav = document.querySelector("#smallnav-container");
+import {
+  getFromStorage,
+  getUsername,
+  storageKey,
+  removeFromStorage,
+  tokenKey,
+  userKey,
+} from "../utils/storage.js";
 
-import { getExistingProduct } from "../utils/storage.js";
-
-const cart = getExistingProduct();
+const cart = getFromStorage(storageKey);
 
 export function createNav() {
   const pathname = document.location;
 
+  const username = getUsername();
+
+  let loginLink = `
+                    <a href="login.html" class="${
+                      pathname === "/login.html" ? "active" : ""
+                    }">Login
+                    </a>
+                  `;
+  if (username) {
+    loginLink = `
+                    <a href="admin.html" class="${
+                      pathname === "/admin.html" ? "active" : ""
+                    }">Admin ${username}
+                    </a>
+                  <li>
+                    <button id="logout" class="logout-cta">Logout</button>
+                  </li>
+                 `;
+  }
   mainNav.innerHTML = `<a href="index.html">
                             <img src="img/logo.png" id="main-logo" />
                        </a>
                         <ul>
-                            <li><a class="${
-                              pathname === "/index.html" ? "active" : ""
-                            }" href="index.html">Home</a></li>
-                            <li><a href="products.html" class="${
+                            <li><a href="/" class=" ${
+                              pathname === "/" ? "active" : ""
+                            }" >Home</a></li>
+
+                            <li><a href="/products.html" class="${
                               pathname === "/products.html" ? "active" : ""
                             }">Shop</a></li>
-                            <li><a href="login.html" class="${
-                              pathname === "/login.html" ? "active" : ""
-                            }">Login</a></li>
                             <li>
+                            ${loginLink}
+                            </li>
                                 <a href="cart.html" id="big-cart" class=" ${
                                   pathname === "/cart.html" ? "active" : ""
                                 }"
@@ -49,10 +74,7 @@ export function createNav() {
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="login.html" class="${
-                                    pathname === "/login.html" ? "active" : ""
-                                  }">Login
-                                  </a>
+                                ${loginLink}
                                 </li>
                                 <li>
                                     <a href="cart.html" class="${
@@ -79,6 +101,12 @@ export function createNav() {
                             </div>
                         </div>
                         <div class="overlay"></div>`;
+  if (username) {
+    const logoutLink = document.querySelectorAll("#logout");
+    logoutLink.forEach((logout) => {
+      logout.addEventListener("click", doLogOut);
+    });
+  }
 
   (function cartCounter() {
     const bigCart = document.querySelector("#big-cart");
@@ -96,4 +124,14 @@ export function createNav() {
                             alt="shopping cart icon"/>
                             ${counter}`;
   })();
+}
+
+function doLogOut() {
+  const logOutConfirm = confirm("Are you sure you want to log out?");
+
+  if (logOutConfirm) {
+    removeFromStorage(userKey);
+    removeFromStorage(tokenKey);
+    location.href = "login.html";
+  }
 }

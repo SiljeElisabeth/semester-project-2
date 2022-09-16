@@ -67,7 +67,7 @@
 }
 .delete-cta, 
 .cart-remove-btn{
-    @include cta(100%, 5px, 0 auto);
+    @include cta(100%, 5px ,0 auto);
     border:none;
     background-color: #da3434;
     color:white;
@@ -75,6 +75,9 @@
 .delete-cta:hover,
 .cart-remove-btn:hover{
     background-color: #c72f2f;
+}
+.delete-container{
+    @include cta(100%, 5px, 20px);
 }
 .add-to-cart:hover,
 .checkout:hover{
@@ -93,6 +96,11 @@
 .login:hover{
     background-color: #642a75;
 }
+.logout-cta{
+    border:none;
+    background-color:white;
+    padding:0;
+}
 .add-image-container{
     margin-bottom:20px;
 }
@@ -101,4 +109,16 @@
     background-color:white;
     text-decoration: underline;
     font-size:1.2em;
+}
+
+.tab-btn{
+    background-color: rgb(218, 218, 218);
+    border:none;
+    border-radius: 10px 10px 0 0;
+    padding:10px;
+
+  
+}  
+.active-tab{
+    background-color: white;
 }

@@ -7,9 +7,9 @@ export async function createHtmlProducts(products) {
     productGridContainer.innerHTML += `  <a href="product-detail.html?id=${product.id}">
                                             <div class="card mb-3">
                                               <img
-                                                src="${product.image.url}"
+                                                src="${product.image_url}"
                                                 class="card-img-top card-img"
-                                                alt="..."
+                                                alt="purse"
                                               />
                                               <div class="card-body">
                                                 <h5 class="card-title">${product.title}</h5>

@@ -1,7 +1,9 @@
-import { getExistingProduct, saveCart } from "./storage.js";
-const currentCart = getExistingProduct();
+import { getFromStorage, saveToStorage } from "./storage.js";
+import { storageKey } from "./storage.js";
 
-export function handleClick() {
+const currentCart = getFromStorage(storageKey);
+
+export function handleCart() {
   this.classList.toggle("remove-from-cart");
   this.classList.toggle("add-to-cart");
 
@@ -20,12 +22,12 @@ export function handleClick() {
       id: id,
     };
     currentCart.push(cartItem);
-    saveCart(currentCart);
+    saveToStorage(storageKey, currentCart);
   } else {
     const newCart = currentCart.filter((cartItem) => cartItem.id !== id);
-    saveCart(newCart);
+    saveToStorage(storageKey, newCart);
   }
-  window.location.reload();
+  location.reload();
 }
 
 export function handleCartRemove() {
@@ -35,8 +37,7 @@ export function handleCartRemove() {
 
   if (itemExsist) {
     const newCart = currentCart.filter((cartItem) => cartItem.id !== id);
-    saveCart(newCart);
+    saveToStorage(storageKey, newCart);
   }
-  window.location.reload();
-  console.log(itemExsist);
+  location.reload();
 }

@@ -1,51 +1,49 @@
-.tab-container{
+.admin-display{
+    max-width:950px;
     margin: 40px auto;
-    max-width:800px;
 }
-.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
-    background-color:white;
-}
-.tab-pane{
+.tab-container{
     background-color: white;
     padding:20px;
     border-radius:0 0 10px 10px;
     border:none;
     box-shadow:$shadow;
+
 }
-#title, 
-#price,
-#description{
+#add-form label{
+    margin-top:10px;
+}
+.add-input{
     width:100%;
-    margin-bottom:10px;
+}
+.add-price{
+    width:10%;
 }
 .description{
     resize:vertical;
 }
 
 .tab-view-item{
-    h3{
-        font-family: 'Noto Sans', sans-serif;
-        text-align:start;
-        border-bottom: 1px solid black;
-    }
     img{
     max-width: 50%;
     }
     .descript-img-container{
-        max-width:700px;
         display:grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: 2fr 1fr;
         }
 }
-.edit-image{
-    img{
-        height:250px;
-        object-fit:contain;
-        margin-bottom:20px;
+#tab-view-container{
+    h3{
+        font-family: 'Noto Sans', sans-serif;
+        text-align:start;
     }
 }
-#tab-content-edit{
-        display:none;
-    }
+
+
+.hide-tabcontent{
+    display:none;
+}
+.add-featured-container{
+    margin-top:20px;
+}
 

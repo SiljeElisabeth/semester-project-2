@@ -1,0 +1,19 @@
+@import "./mixin";
+
+#edit-form{
+    @include center(950px);
+    background-color: white;
+    padding:20px;
+    border-radius:10px;
+    border:none;
+    box-shadow:$shadow;
+}
+
+.edit-image{
+    img{
+        height:300px;
+        object-fit:contain;
+        margin: 20px 0
+
+    }
+}

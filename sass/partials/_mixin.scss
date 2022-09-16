@@ -19,3 +19,8 @@
     width:100%;
     padding:20px;
 }
+
+@mixin center($width){
+    max-width:$width;
+    margin: 10px auto;
+}

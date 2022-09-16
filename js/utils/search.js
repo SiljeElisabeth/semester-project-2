@@ -1,5 +1,5 @@
 const searchInput = document.querySelector("#search");
-import { createHtmlProducts } from "./createHtmlProducts.js";
+import { createHtmlProducts } from "../components/createHtmlProducts.js";
 
 export function searchProducts(products) {
   searchInput.onkeyup = function (event) {
