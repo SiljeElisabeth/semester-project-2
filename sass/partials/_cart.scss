@@ -3,6 +3,7 @@
     padding:30px;
     border-radius:$border-radius;
     margin-bottom:50px;
+    box-shadow: $shadow;
 
     }
 
@@ -23,6 +24,7 @@
         display:flex;
         justify-content: center;
         align-items: center;
+        
         @media screen and (min-width:751px){
             font-size:1.2em;
         }
@@ -32,6 +34,11 @@
     .cart-info{
         padding-left:10px;
         padding-top:10px;
+
+        h2{
+        margin:0;
+        font-size:1.4em;
+        }
     }
     .total-container{
         display: flex;

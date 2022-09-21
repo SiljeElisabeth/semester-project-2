@@ -12,11 +12,15 @@
 .col{
     padding:10px;
 }
-.ftd-container h2{
+.ftd-container {
+    h1{
+        color:$primary;
+        margin: 20px 0;
+    }
+    h2{
+    font-size:1.2em;
     text-align: center;
-    color:$primary;
-    margin-top:2em;
-    margin-bottom:1em;
+    }
 }
 .ftd-grid{
     display:grid;
@@ -32,14 +36,23 @@
         text-decoration: none;
         color:black;
     }
+    a:hover{
+        opacity:80%;
+    }
 }
-
 
 .home-banner-container img{
     max-height:500px;
     object-fit: cover;
 }
-
+.logo-divider{
+    display:flex;
+    justify-content: center;
+    img{
+    height:50px;
+    max-width:60px;
+}
+}
 .news-container {
     max-width:750px;
     margin:0 auto;
@@ -47,4 +60,12 @@
     img{
     @include img;
     }
+    h3{
+        text-align: center;
+        color:$primary;
+        font-size:2em;
+        font-family:'Aboreto', cursive;
+    }
 }
+
+

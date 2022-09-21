@@ -1,5 +1,7 @@
 
 .product-item{
+    max-width:750px;
+    margin:5px auto;
     img{
         max-height: 450px;
         object-fit:contain;
@@ -16,6 +18,8 @@
 }
 
 .description-box{
+    max-width:750px;
+    margin:50px auto;
     background-color: white;
     padding:30px;
     box-shadow:$shadow;
@@ -24,3 +28,4 @@
 
 
 }
+

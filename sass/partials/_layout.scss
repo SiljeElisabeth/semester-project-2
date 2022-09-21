@@ -3,18 +3,22 @@ body{
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-image: radial-gradient(#ffffff 1px, transparent 1px), radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+    background-color: #F2F2F2;
 }
 html {
     height: 100%;
 }
 
-.wrapper { //under header, close over footer
+.wrapper {
     flex: 1 0 auto;
 }
 header{
     background-color: white;
 }
-h1, h2{
+h1{
     font-family:'Aboreto', cursive;
     text-align:center;
     margin-top: 10px;
@@ -51,7 +55,24 @@ img{
     border: 1px solid red;
 }
 
+.loader{
+    margin:10px auto;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border-top:3px solid $primary;
+    border-right:transparent 3px solid;
+    animation: rotation 1s linear infinite;
+}
 
+@keyframes rotation{
+    0% {
+        transform: rotate(0deg);
+    }   
+    100%{
+        transform: rotate(360deg);
+    }
+}
 footer{
     flex-shrink: 0;
     display: grid;

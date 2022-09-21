@@ -10,7 +10,7 @@ export function deleteProduct(id) {
 
   deleteBtn.onclick = async function () {
     const doDelete = confirm("Are you sure you want to delete this product?");
-    console.log(doDelete);
+
     if (doDelete) {
       const url = apiProducts + "/" + id;
 

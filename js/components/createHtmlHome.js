@@ -1,8 +1,11 @@
 const featuredGrid = document.querySelector(".ftd-grid");
 const newsContainer = document.querySelector(".news-container");
 const bannerContainer = document.querySelector(".home-banner-container");
+const loader = document.querySelector(".loader");
 
 export async function createHtmlHome(products, banner) {
+  loader.style.display = "none";
+
   bannerContainer.innerHTML = ` <img
                                         src="${banner.hero_banner.url}"
                                         class="img-fluid"
@@ -26,7 +29,7 @@ export async function createHtmlHome(products, banner) {
                                     alt="purse"
                                     />
                                     <div class="card-body">
-                                    <h5 class="card-title">${featuredProducts[i].title}</h5>
+                                    <h2 class="card-title">${featuredProducts[i].title}</h2>
                                     <p class="card-text">$${featuredProducts[i].price}</p>
                                     </div>
                                    </div>
@@ -35,7 +38,7 @@ export async function createHtmlHome(products, banner) {
 
   const newProduct = products[products.length - 1].image_url;
 
-  newsContainer.innerHTML = `<h2>News</h2>
+  newsContainer.innerHTML = `<h3>News</h3>
                                     <img
                                     src="${newProduct}"
                                     class="img-fluid"

@@ -19,19 +19,21 @@ if (currentCart.length === 0) {
 }
 
 currentCart.forEach((cartItems) => {
-  cartContainer.innerHTML += `  <img src="${cartItems.img}" />
+  cartContainer.innerHTML += `  <a href="product-detail.html?id=${cartItems.id}">
+                                  <img src="${cartItems.img}" /> 
+                                </a>
                                 <div class="cart-info">
-                                <h3>${cartItems.title}</h3>
-                                <p>$${cartItems.price}</p>
+                                  <h2>${cartItems.title}</h2>
+                                  <p>$${cartItems.price}</p>
                                 </div>
                                 <div class="remove-item">
-                                <button class="cart-remove-btn" id="remove-cart-item" data-id="${cartItems.id}">Remove item</button>
-                            </div>`;
+                                  <button class="cart-remove-btn" id="remove-cart-item" data-id="${cartItems.id}">Remove item</button>
+                                </div>`;
 
   total += parseInt(cartItems.price);
 
-  cartSummary.innerHTML = `  <h4>Total:</h4>
-                            <p>$${total}</p>`;
+  cartSummary.innerHTML = `  <h3>Total:</h3>
+                            <h4>$${total}</h4>`;
 
   const removeBtn = document.querySelectorAll("#remove-cart-item");
 

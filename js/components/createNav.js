@@ -12,7 +12,7 @@ import {
 const cart = getFromStorage(storageKey);
 
 export function createNav() {
-  const pathname = document.location;
+  const pathname = document.location.pathname;
 
   const username = getUsername();
 
@@ -33,12 +33,15 @@ export function createNav() {
                   </li>
                  `;
   }
+  console.log(pathname);
   mainNav.innerHTML = `<a href="index.html">
                             <img src="img/logo.png" id="main-logo" />
                        </a>
                         <ul>
                             <li><a href="/" class=" ${
-                              pathname === "/" ? "active" : ""
+                              pathname === "/" || pathname === "/index.html"
+                                ? "active"
+                                : ""
                             }" >Home</a></li>
 
                             <li><a href="/products.html" class="${
@@ -61,7 +64,9 @@ export function createNav() {
                                 <p>X</p>
                                 <li>
                                   <a class="${
-                                    pathname === "/index.html" ? "active" : ""
+                                    pathname === "/index.html" || "/"
+                                      ? "active"
+                                      : ""
                                   }" href="index.html">Home
                                   </a>
                                 </li>
@@ -88,7 +93,7 @@ export function createNav() {
 
                         <div class="smallscreen-nav-container">
                             <a href="index.html">
-                              <img class="small-logo" src="img/logosmall.png" alt="small logo"/>
+                              <img src="img/Capitallogo.png" alt="small logo"/>
                             </a>
                             
                           <div class="cart-icon-container">

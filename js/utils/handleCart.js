@@ -33,11 +33,16 @@ export function handleCart() {
 export function handleCartRemove() {
   const id = this.dataset.id;
 
-  const itemExsist = currentCart.find((cartItem) => cartItem.id === id);
+  const doRemove = confirm(
+    "Are you sure you want to remove this product from your cart?"
+  );
+  if (doRemove) {
+    const itemExsist = currentCart.find((cartItem) => cartItem.id === id);
 
-  if (itemExsist) {
-    const newCart = currentCart.filter((cartItem) => cartItem.id !== id);
-    saveToStorage(storageKey, newCart);
+    if (itemExsist) {
+      const newCart = currentCart.filter((cartItem) => cartItem.id !== id);
+      saveToStorage(storageKey, newCart);
+    }
+    location.reload();
   }
-  location.reload();
 }

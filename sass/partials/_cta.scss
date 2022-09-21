@@ -13,47 +13,64 @@
     justify-content: right;
     margin-right:30px;
 }
-.cta-home{
-    @include cta(80%,5px, 30px);
-    color:$primary;
-    background-color:white;
+.cta-home,
+.cta-cart,
+.add-to-cart{
+    @include cta(60%,5px, 30px);
+    color:white;
+    background-color:$primary;
+    border:none;
 
     @media screen and (min-width:751px){
-        @include cta(20%, 5px, 30px);
+        @include cta(30%, 5px, 30px);
     }
 }
-.cta-home:hover,
-.cta-cart:hover,
-.remove-from-cart:hover{
-    background-color:#f1f1f1;
-    color:$primary;
-    text-decoration: none;
+.cta-home{
+    @include cta(40%,5px, 30px);
+}
+.add-to-cart{
+    @media screen and (min-width:751px){
+        @include cta(60%, 5px, 30px);
+    }
 }
 .cta-cart{
     @include cta(100%,5px, 30px);
-    color:$primary;
-    background-color:white;
-    border: 1px solid gray;
-
-    @media screen and (min-width:751px){
+    
+     @media screen and (min-width:751px){
         @include cta(50%, 5px, 30px);
     }
-
-}
-
-.add-to-cart, 
-.checkout,
-.login,
-.save-cta{
-    background-color: $color-add;
-    border: 1px solid $color-add-border;
-    @include cta(100%, 5px, 30px);
 }
 .remove-from-cart{
-    @include cta(100%, 5px, 30px);
+    @include cta(60%, 5px, 30px);
     color:$primary;
     border: 1px solid $primary;
     background-color:white;
+}
+
+.remove-from-cart:hover{
+    background-color:rgb(226, 225, 225);
+}
+
+.cta-home:hover,
+.cta-cart:hover,
+.add-to-cart:hover{
+    background-color:$primary-hover;
+    color:white;
+    text-decoration: none;
+}
+
+.checkout,
+.save-cta{
+    background-color: $color-add;
+    border: 1px solid $color-add-border;
+    color:white;
+    text-shadow:$text-shadow;
+    @include cta(100%, 5px, 30px);
+}
+
+.checkout:hover,
+.save-cta:hover{
+    background-color:$color-add-hover;
 }
 
 
@@ -65,29 +82,36 @@
 #add-save{
     margin-top:20px;
 }
-.delete-cta, 
 .cart-remove-btn{
+    @include cta(70%, 2px, 0);
+    background-color:$color-remove;
+    color:white;
+    border:none;
+    font-size:.8em;
+
+}
+.cart-remove-btn:hover,
+.delete-cta:hover{
+    background-color:$color-remove-hover;
+}
+.delete-cta{
     @include cta(100%, 5px ,0 auto);
     border:none;
-    background-color: #da3434;
+    background-color: $color-remove;
     color:white;
+    text-shadow:$text-shadow;
 }
-.delete-cta:hover,
-.cart-remove-btn:hover{
-    background-color: #c72f2f;
-}
+
 .delete-container{
     @include cta(100%, 5px, 20px);
 }
-.add-to-cart:hover,
-.checkout:hover{
-    background-color:$color-add-hover;
-}
+
 .fa-angle-left{
     font-size: 2em;
     margin:10px;
 }
 .login{
+    @include cta(100%, 5px, 10px);
     background-color: $primary;
     color:white;
     border: 1px solid $primary;
@@ -100,6 +124,7 @@
     border:none;
     background-color:white;
     padding:0;
+
 }
 .add-image-container{
     margin-bottom:20px;

@@ -1,7 +1,9 @@
 const productGridContainer = document.querySelector(".product-grid-container");
+const loader = document.querySelector(".loader");
 
 export async function createHtmlProducts(products) {
   productGridContainer.innerHTML = "";
+  loader.style.display = "none";
 
   products.forEach(function (product) {
     productGridContainer.innerHTML += `  <a href="product-detail.html?id=${product.id}">
