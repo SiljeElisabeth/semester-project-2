@@ -12491,14 +12491,6 @@ fieldset:disabled .btn {
       grid-template-columns: 1fr 1fr;
 }
 
-.card-img {
-  height: 290px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
 .col {
   padding: 10px;
 }
@@ -12619,8 +12611,16 @@ img {
 .card {
   -webkit-box-shadow: 4px 4px 4px #cacaca;
           box-shadow: 4px 4px 4px #cacaca;
-  max-height: 390px;
+  height: 390px;
   z-index: -1;
+}
+
+.card img {
+  height: 276px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .message {
@@ -12920,7 +12920,8 @@ ul p {
           filter: drop-shadow(4px 4px 4px #cacaca);
   text-decoration: none;
   color: white;
-  background-color: #743089;
+  background: -webkit-gradient(linear, left top, left bottom, from(#743089), to(#5c1570));
+  background: linear-gradient(#743089, #5c1570);
   border: none;
 }
 
@@ -13014,15 +13015,16 @@ ul p {
 .cta-home:hover,
 .cta-cart:hover,
 .add-to-cart:hover {
-  background-color: #5c1570;
+  background: #5c1570;
   color: white;
   text-decoration: none;
 }
 
 .checkout,
 .save-cta {
-  background-color: #8fce19;
-  border: 1px solid #15A42F;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8fce19), to(#63b615));
+  background: linear-gradient(#8fce19, #63b615);
+  border: none;
   color: white;
   text-shadow: 1px 1px black;
   width: 100%;
@@ -13038,7 +13040,7 @@ ul p {
 
 .checkout:hover,
 .save-cta:hover {
-  background-color: #75aa13;
+  background: #63b615;
 }
 
 @media screen and (min-width: 751px) {
@@ -13069,7 +13071,8 @@ ul p {
   -webkit-filter: drop-shadow(4px 4px 4px #cacaca);
           filter: drop-shadow(4px 4px 4px #cacaca);
   text-decoration: none;
-  background-color: #D31D1D;
+  background: -webkit-gradient(linear, left top, left bottom, from(#D31D1D), to(#b61717));
+  background: linear-gradient(#D31D1D, #b61717);
   color: white;
   border: none;
   font-size: .8em;
@@ -13077,7 +13080,7 @@ ul p {
 
 .cart-remove-btn:hover,
 .delete-cta:hover {
-  background-color: #b61717;
+  background: #b61717;
 }
 
 .delete-cta {
@@ -13374,10 +13377,6 @@ ul p {
   display: none;
 }
 
-.add-featured-container {
-  margin-top: 20px;
-}
-
 #edit-form {
   max-width: 950px;
   margin: 10px auto;
@@ -13387,6 +13386,10 @@ ul p {
   border: none;
   -webkit-box-shadow: 4px 4px 4px #cacaca;
           box-shadow: 4px 4px 4px #cacaca;
+}
+
+#edit-form label {
+  margin-top: 10px;
 }
 
 .edit-image img {

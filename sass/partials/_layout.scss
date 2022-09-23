@@ -29,8 +29,14 @@ img{
 }
 .card{
     box-shadow: $shadow;
-    max-height:390px;
+    height:390px;
     z-index:-1;
+
+    img{
+        height: 276px;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 .message{
    margin-bottom:5px;

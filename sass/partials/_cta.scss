@@ -18,7 +18,7 @@
 .add-to-cart{
     @include cta(60%,5px, 30px);
     color:white;
-    background-color:$primary;
+    background: linear-gradient($primary, $primary-hover);
     border:none;
 
     @media screen and (min-width:751px){
@@ -54,15 +54,15 @@
 .cta-home:hover,
 .cta-cart:hover,
 .add-to-cart:hover{
-    background-color:$primary-hover;
+    background:$primary-hover;
     color:white;
     text-decoration: none;
 }
 
 .checkout,
 .save-cta{
-    background-color: $color-add;
-    border: 1px solid $color-add-border;
+    background:linear-gradient($color-add, $color-add-hover);
+    border:none;
     color:white;
     text-shadow:$text-shadow;
     @include cta(100%, 5px, 30px);
@@ -70,7 +70,7 @@
 
 .checkout:hover,
 .save-cta:hover{
-    background-color:$color-add-hover;
+    background:$color-add-hover;
 }
 
 
@@ -84,7 +84,7 @@
 }
 .cart-remove-btn{
     @include cta(70%, 2px, 0);
-    background-color:$color-remove;
+    background:linear-gradient($color-remove, $color-remove-hover);
     color:white;
     border:none;
     font-size:.8em;
@@ -92,7 +92,7 @@
 }
 .cart-remove-btn:hover,
 .delete-cta:hover{
-    background-color:$color-remove-hover;
+    background:$color-remove-hover;
 }
 .delete-cta{
     @include cta(100%, 5px ,0 auto);
