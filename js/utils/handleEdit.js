@@ -45,7 +45,7 @@ export function submitEditForm(event) {
 }
 
 async function updateProduct(title, price, description, image, featured) {
-  const singleProduct = apiProducts + "/" + id;
+  const singleProduct = "https://fakestoreapi.com/carts" + id;
 
   const token = getToken();
 

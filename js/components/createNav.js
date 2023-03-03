@@ -2,7 +2,7 @@ const mainNav = document.querySelector("#main-nav");
 const smallNav = document.querySelector("#smallnav-container");
 import {
   getFromStorage,
-  getUsername,
+  getToken,
   storageKey,
   removeFromStorage,
   tokenKey,
@@ -14,7 +14,8 @@ const cart = getFromStorage(storageKey);
 export function createNav() {
   const pathname = document.location.pathname;
 
-  const username = getUsername();
+  const token = getToken();
+  const noToken = token.length === 0;
 
   let loginLink = `
                     <a href="login.html" class="${
@@ -22,18 +23,18 @@ export function createNav() {
                     }">Login
                     </a>
                   `;
-  if (username) {
+  if (!noToken) {
     loginLink = `
                     <a href="admin.html" class="${
                       pathname === "/admin.html" ? "active" : ""
-                    }">Admin ${username}
+                    }">Admin
                     </a>
                   <li>
                     <button id="logout" class="logout-cta">Logout</button>
                   </li>
                  `;
   }
-  console.log(pathname);
+
   mainNav.innerHTML = `<a href="index.html">
                             <img src="img/logo.png" id="main-logo" />
                        </a>
@@ -106,7 +107,7 @@ export function createNav() {
                             </div>
                         </div>
                         <div class="overlay"></div>`;
-  if (username) {
+  if (!noToken) {
     const logoutLink = document.querySelectorAll("#logout");
     logoutLink.forEach((logout) => {
       logout.addEventListener("click", doLogOut);
@@ -135,7 +136,6 @@ function doLogOut() {
   const logOutConfirm = confirm("Are you sure you want to log out?");
 
   if (logOutConfirm) {
-    removeFromStorage(userKey);
     removeFromStorage(tokenKey);
     location.href = "login.html";
   }

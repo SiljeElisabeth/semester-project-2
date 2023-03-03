@@ -10,7 +10,7 @@ import { deleteProduct } from "../utils/handleDelete.js";
 export function createHtmlEdit(product) {
   editTitle.value = product.title;
   editPrice.value = product.price;
-  editImg.value = product.image_url;
+  editImg.value = product.image;
   editDescription.value = product.description;
   editId.value = product.id;
 

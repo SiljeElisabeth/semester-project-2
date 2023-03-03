@@ -7,7 +7,7 @@ import { createNav } from "./components/createNav.js";
 import { viewTab, addTab } from "./utils/tabs.js";
 import { createHtmlAdmin } from "./components/createHtmlAdmin.js";
 import { apiProducts } from "./utils/api.js";
-import { getUsername } from "./utils/storage.js";
+import { getToken } from "./utils/storage.js";
 import { submitAddForm } from "./utils/handleAdminForms.js";
 import { displayMessage } from "./utils/displayMessage.js";
 
@@ -16,7 +16,8 @@ createNav();
 viewBtn.addEventListener("click", viewTab);
 addBtn.addEventListener("click", addTab);
 
-const username = getUsername();
+const token = getToken();
+const noToken = token.length === 0;
 
 (async function fetchProducts() {
   messageContainer.innerHTML = "";
@@ -26,7 +27,7 @@ const username = getUsername();
 
     createHtmlAdmin(products);
 
-    if (!username) {
+    if (noToken) {
       document.location.href = "index.html";
     }
   } catch (error) {

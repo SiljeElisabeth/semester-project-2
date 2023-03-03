@@ -1,5 +1,4 @@
-import { apiProducts } from "./utils/api.js";
-import { homeBannerApi } from "./utils/api.js";
+import { apiHomeProducts } from "./utils/api.js";
 import { createHtmlHome } from "./components/createHtmlHome.js";
 import { createNav } from "./components/createNav.js";
 
@@ -7,13 +6,9 @@ createNav();
 
 (async function fetchProducts() {
   try {
-    const response = await fetch(apiProducts);
+    const response = await fetch(apiHomeProducts);
     const products = await response.json();
-
-    const responsebanner = await fetch(homeBannerApi);
-    const homeBanner = await responsebanner.json();
-
-    createHtmlHome(products, homeBanner);
+    createHtmlHome(products);
   } catch (error) {
     console.log(error);
   }

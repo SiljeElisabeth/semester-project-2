@@ -19,8 +19,9 @@ if (currentCart.length === 0) {
 }
 
 currentCart.forEach((cartItems) => {
+  console.log(cartItems);
   cartContainer.innerHTML += `  <a href="product-detail.html?id=${cartItems.id}">
-                                  <img src="${cartItems.img}" /> 
+                                  <img src="${cartItems.image}" /> 
                                 </a>
                                 <div class="cart-info">
                                   <h2>${cartItems.title}</h2>

@@ -18,11 +18,11 @@ export async function createHtmlProductDetail(product) {
     buttonText = "Remove from cart";
   }
   console.log(product);
-  productContainer.innerHTML = `<img src="${product.image_url}" />
+  productContainer.innerHTML = `<img src="${product.image}" />
                                 <h3>${product.title}</h3>
                                 <p>$${product.price}</p> 
                                 <div class="cta-container">
-                                  <button id="add-to-cart" data-id="${product.id}" data-img="${product.image_url}" data-title="${product.title}" data-price="${product.price}" class="${buttonClass}">${buttonText}</button>
+                                  <button id="add-to-cart" data-id="${product.id}" data-image="${product.image}" data-title="${product.title}" data-price="${product.price}" class="${buttonClass}">${buttonText}</button>
                                 </div>`;
 
   descriptionBox.innerHTML = ` <h4>Description:</h4>

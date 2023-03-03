@@ -1,3 +1,3 @@
-export const baseApi = "https://sp-2-api.herokuapp.com/";
-export const homeBannerApi = "https://sp-2-api.herokuapp.com/" + "home";
-export const apiProducts = "https://sp-2-api.herokuapp.com/" + "products";
+export const apiProducts = "https://fakestoreapi.com/products";
+export const apiHomeProducts = "https://fakestoreapi.com/products?limit=4";
+export const apiLogin = "https://nf-api.onrender.com/api/v1/auth/login";

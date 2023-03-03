@@ -12,7 +12,7 @@ export function createHtmlAdmin(products) {
                                     <div class="descript-img-container">
                                     <p><strong>Description:</strong>${product.description}
                                     </p>
-                                    <img src=${product.image_url}   
+                                    <img src=${product.image}   
                                     alt="purse" 
                                     />
                                     </div>

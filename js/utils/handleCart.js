@@ -8,7 +8,7 @@ export function handleCart() {
   this.classList.toggle("add-to-cart");
 
   const title = this.dataset.title;
-  const img = this.dataset.img;
+  const image = this.dataset.image;
   const price = this.dataset.price;
   const id = this.dataset.id;
 
@@ -17,7 +17,7 @@ export function handleCart() {
   if (!itemExsist) {
     const cartItem = {
       title: title,
-      img: img,
+      image: image,
       price: price,
       id: id,
     };

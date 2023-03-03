@@ -5,7 +5,7 @@ const usernameError = document.querySelector(".username-error");
 const messageContainer = document.querySelector(".message-container");
 
 import { displayMessage } from "./displayMessage.js";
-import { baseApi } from "./api.js";
+import { apiLogin } from "./api.js";
 import { saveToken, saveUser } from "./storage.js";
 
 export function submitForm(event) {
@@ -28,28 +28,26 @@ export function submitForm(event) {
 }
 
 async function login(username, password) {
-  const authUrl = baseApi + "auth/local";
-  const data = JSON.stringify({ identifier: username, password: password });
-
   const options = {
     method: "POST",
-    body: data,
+    body: JSON.stringify({
+      username: "user1",
+      password: "pass123",
+    }),
     headers: {
       "Content-Type": "application/json",
     },
   };
 
   try {
-    const response = await fetch(authUrl, options);
+    const response = await fetch(apiLogin, options);
     const json = await response.json();
-
     console.log(json);
+
     messageContainer.innerHTML = "";
 
-    if (json.user) {
-      saveToken(json.jwt);
-      saveUser(json.user);
-
+    if (json.accessToken) {
+      saveToken(json.accessToken);
       location.href = "admin.html";
     }
     if (json.error) {
@@ -59,3 +57,11 @@ async function login(username, password) {
     console.log(error);
   }
 }
+
+async function getUsers() {
+  fetch("https://fakestoreapi.com/users")
+    .then((res) => res.json())
+    .then((json) => console.log(json));
+}
+
+getUsers();
