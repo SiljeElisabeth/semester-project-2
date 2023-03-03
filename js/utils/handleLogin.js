@@ -20,14 +20,11 @@ export function submitForm(event) {
   if (usernameValue.length === 0) {
     displayMessage("error", "Please enter your username", ".username-error");
   }
-  if (passwordValue.length === 0) {
-    displayMessage("error", "Please enter your password", ".password-error");
-  }
 
   login(usernameValue, passwordValue);
 }
 
-async function login(username, password) {
+async function login() {
   const options = {
     method: "POST",
     body: JSON.stringify({
@@ -57,11 +54,3 @@ async function login(username, password) {
     console.log(error);
   }
 }
-
-async function getUsers() {
-  fetch("https://fakestoreapi.com/users")
-    .then((res) => res.json())
-    .then((json) => console.log(json));
-}
-
-getUsers();

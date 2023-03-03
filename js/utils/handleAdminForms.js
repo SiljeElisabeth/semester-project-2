@@ -64,8 +64,9 @@ async function addProduct(title, price, description, featured, imageUrl) {
   try {
     const response = await fetch(apiProducts, options);
     const json = await response.json();
+    console.log(json);
 
-    if (json.created_at) {
+    if (json.id) {
       displayMessage("success", "Product created", ".message-container");
       addForm.reset();
     }

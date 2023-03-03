@@ -45,7 +45,7 @@ export function submitEditForm(event) {
 }
 
 async function updateProduct(title, price, description, image, featured) {
-  const singleProduct = "https://fakestoreapi.com/carts" + id;
+  const singleProduct = apiProducts + "/" + id;
 
   const token = getToken();
 
@@ -69,8 +69,9 @@ async function updateProduct(title, price, description, image, featured) {
   try {
     const response = await fetch(singleProduct, options);
     const json = await response.json();
+    console.log(json);
 
-    if (json.updated_at) {
+    if (json.id) {
       displayMessage("success", "Product updated", ".message-container");
     }
 
