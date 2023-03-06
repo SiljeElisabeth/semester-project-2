@@ -37,8 +37,6 @@ Admin:
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
 - [Bootstrap](https://getbootstrap.com)
 - [Sass](https://sass-lang.com/)
 - [Fake store Api](https://fakestoreapi.com/)
